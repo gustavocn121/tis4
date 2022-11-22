@@ -13,8 +13,8 @@ import java.io.IOException;
 @Order(Ordered.HIGHEST_PRECEDENCE)
 public class CORSFilter implements Filter {
 
-    private static final String LOCAL = "https://plf-es-2022-2-ti4-0658100-hosp-sao-francisco-2-deman-9cfx8vdnh.vercel.app/login"; // URL
-    private static final String REMOTO = "https://plf-es-2022-2-ti4-0658100-hosp-sao-francisco-2-deman-9cfx8vdnh.vercel.app/login"; // OTHER URL
+    private static final String LOCAL = "https://plf-es-2022-2-ti4-0658100-hosp-sao-francisco-2-deman-9cfx8vdnh.vercel.app:80"; // URL
+    private static final String REMOTO = "https://plf-es-2022-2-ti4-0658100-hosp-sao-francisco-2-deman-9cfx8vdnh.vercel.app:80"; // OTHER URL
 
     @Override
     public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
