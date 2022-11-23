@@ -15,9 +15,9 @@ public class EmailController {
     @Autowired
     private EmailService emailService;
 
-    @PostMapping(value = "/change-password/")
-    public ResponseEntity<EmailDto> generateRecoveryTokenEmail(@RequestBody UserDTO userDTO) {
-        var emailDto = emailService.sendPasswordRecoveryEmail(userDTO.getUserName());
+    @PostMapping(value = "/change-password/{username}")
+    public ResponseEntity<EmailDto> generateRecoveryTokenEmail(@PathVariable("username") String username) {
+        var emailDto = emailService.sendPasswordRecoveryEmail(username);
         return new ResponseEntity(emailDto, HttpStatus.OK);
     }
 
